@@ -17,7 +17,7 @@ public class Gear : MonoBehaviour
     public bool gearCanBeMoved = true;
     public bool canBeSwappd = true;
     public GearType gearType;
-    public float speedRotationMultiplier = 10f;
+    public float speedRotationMultiplier;
 
     [HideInInspector]
     public GearPos myPos;
@@ -104,9 +104,9 @@ public class Gear : MonoBehaviour
         {
             yield return new WaitForSeconds(0.01f);
             if (rotSide == RotationSide.right)
-                transform.Rotate(0, 0, -(speedRotationMultiplier) * Time.deltaTime);
+                transform.Rotate(0, 0, -(speedRotationMultiplier) * Time.deltaTime*3);
             else
-                transform.Rotate(0, 0, (speedRotationMultiplier) * Time.deltaTime);
+                transform.Rotate(0, 0, (speedRotationMultiplier) * Time.deltaTime*3);
 
         }
 

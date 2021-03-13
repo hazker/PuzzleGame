@@ -114,6 +114,6 @@ MonoBehaviour:
   gearCanBeMoved: 1
   canBeSwappd: 1
   gearType: 4
-  speedRotationMultiplayer: 98
+  speedRotationMultiplier: 98
   myPos: {fileID: 0}
   rotSide: 0

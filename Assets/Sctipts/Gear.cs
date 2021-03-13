@@ -102,7 +102,7 @@ public class Gear : MonoBehaviour
         victory = true;
         while (true)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForFixedUpdate();
             if (rotSide == RotationSide.right)
                 transform.Rotate(0, 0, -(speedRotationMultiplier) * Time.deltaTime*3);
             else

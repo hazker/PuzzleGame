@@ -36,7 +36,7 @@ public class BackgroundTouch : MonoBehaviour
 
     IEnumerator WaitForEndAnim(float time, bool cond)
     {
-        animPlayed = true;    
+        animPlayed = true;
         if (cond)
         {
             miniGame.SetActive(cond);

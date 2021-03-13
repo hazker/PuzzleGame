@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class GhostGear : MonoBehaviour
 {
-
     float curD;
-    
+
     List<GearPos> gearsPos;
     GearPos closestPos;
 

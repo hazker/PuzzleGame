@@ -5,10 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    [Header("OtherSounds")]
+    [Header("Other Sounds")]
     public AudioClip openAudio;
     public AudioClip closeAudio;
-    [Header("MiniGameSounds")]
+
+    [Header("MiniGame Sounds")]
     public AudioClip grabSound;
     public AudioClip setSound;
     public AudioClip swapSound;

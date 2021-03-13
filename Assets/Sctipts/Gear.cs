@@ -17,7 +17,7 @@ public class Gear : MonoBehaviour
     public bool gearCanBeMoved = true;
     public bool canBeSwappd = true;
     public GearType gearType;
-    public float speedRotationMultiplayer = 10f;
+    public float speedRotationMultiplier = 10f;
 
     [HideInInspector]
     public GearPos myPos;
@@ -52,7 +52,7 @@ public class Gear : MonoBehaviour
         }
     }
     private void OnMouseUp()
-    {  
+    {
         if (gearSelected)
         {
             gear.GetComponent<SpriteRenderer>().sprite = null;
@@ -91,7 +91,8 @@ public class Gear : MonoBehaviour
         {
             gear.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
             Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            /*gear.transform.position=*/transform.position = new Vector3(MiniGame.Instance.cam.ScreenToWorldPoint(screenPosition).x, MiniGame.Instance.cam.ScreenToWorldPoint(screenPosition).y, transform.position.z);
+            /*gear.transform.position=*/
+            transform.position = new Vector3(MiniGame.Instance.cam.ScreenToWorldPoint(screenPosition).x, MiniGame.Instance.cam.ScreenToWorldPoint(screenPosition).y, transform.position.z);
         }
 
     }
@@ -103,9 +104,9 @@ public class Gear : MonoBehaviour
         {
             yield return new WaitForSeconds(0.01f);
             if (rotSide == RotationSide.right)
-                transform.Rotate(0, 0, -(speedRotationMultiplayer) * Time.deltaTime);
+                transform.Rotate(0, 0, -(speedRotationMultiplier) * Time.deltaTime);
             else
-                transform.Rotate(0, 0, (speedRotationMultiplayer)*Time.deltaTime);
+                transform.Rotate(0, 0, (speedRotationMultiplier) * Time.deltaTime);
 
         }
 

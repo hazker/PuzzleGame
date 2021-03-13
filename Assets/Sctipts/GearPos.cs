@@ -12,7 +12,7 @@ public class GearPos : MonoBehaviour
 {
     [Header("Gear Position Setup")]
     public GearType defaultGear;
-    
+
     public GearType winGear;
 
     public RotationSide side;
@@ -23,7 +23,6 @@ public class GearPos : MonoBehaviour
     [HideInInspector]
     public Gear myGear;
     Gear myDefaultGear;
-
 
     public void DefaultPos()
     {

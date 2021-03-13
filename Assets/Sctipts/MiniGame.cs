@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MiniGame : MonoBehaviour
 {
-
     private static MiniGame instance;
     public static MiniGame Instance
     {
@@ -31,7 +30,7 @@ public class MiniGame : MonoBehaviour
     [HideInInspector]
     public List<Gear> gearsInGame = new List<Gear>();
     [HideInInspector]
-    public bool fading=false; 
+    public bool fading = false;
 
     private void Awake()
     {
@@ -57,7 +56,6 @@ public class MiniGame : MonoBehaviour
 
         StartCoroutine(fadeOut(gear1.GetComponentInParent<SpriteRenderer>(), gear2.GetComponentInParent<SpriteRenderer>()));
         fading = true;
-
     }
 
     void ActuallySwap(Gear gear1, Gear gear2)
@@ -78,13 +76,12 @@ public class MiniGame : MonoBehaviour
             StartCoroutine(Win());
         }
         fading = false;
-
     }
 
     IEnumerator fadeOut(SpriteRenderer sprite1, SpriteRenderer sprite2)
     {
         Color c = Color.white;
-        for (float i = 1; i > -0.1; i-=0.05f)
+        for (float i = 1; i > -0.1; i -= 0.05f)
         {
             c.a = i;
             sprite1.color = sprite2.color = c;
@@ -103,7 +100,7 @@ public class MiniGame : MonoBehaviour
             sprite1.color = sprite2.color = c;
             yield return new WaitForFixedUpdate();
         }
-        
+
     }
 
     bool CheckVictoryConditions()
